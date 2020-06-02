@@ -199,3 +199,7 @@ $THEME->layouts = [
         'defaultregion' => 'side-pre'
     )
 ];
+#To load the js files in your header:
+$THEME->javascripts = array('js/custom_function.js'); 
+#To load the js files in your footer:
+$THEME->javascripts_footer = array('js/custom_function.js');

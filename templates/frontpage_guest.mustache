@@ -41,10 +41,11 @@
         "bannercontent": "Content string banner content",
         "shoulddisplaymarketing": true
     }
-}}
+}}  
     {{>theme_moove/inc_start}}
-
-    <div id="page" class="container-fluid">
+<button type="submit" id="boxFormControl" class="customBtns btn btn-primary" style="position: absolute;top: 100px;width: 100px;height: 50px;right: 100px; z-index:99999;" onclick="document.getElementById('boxForm').style.display='block';document.getElementById('boxFormControl').style.display='none';document.getElementById('registerControl').style.display='none';" >Sign in</button>
+<button type="submit" id="registerControl" class="customBtns btn btn-primary" style="position: absolute;top: 100px;width: 100px;height: 50px;right: 210px; z-index:99999;" onclick="document.getElementById('boxForm').style.display='block';" class="btn btn-primary">Register</button>   
+<div id="page" class="container-fluid">
         <div id="page-header" class="frontpage-guest-header">
 
             {{#sliderenabled}}
@@ -53,7 +54,7 @@
 
                     {{^disablefrontpageloginbox}}
                         <div id="loginbox" class="d-none d-lg-block">
-                            <div class="card" id="boxForm">
+                            <div class="card" id="boxForm" style="display:none !important;">
                                 {{>theme_moove/frontpage_login}}
                             </div>
                         </div>
@@ -72,11 +73,11 @@
                         {{/bannercontent}}
                     </div>
                     {{^disablefrontpageloginbox}}
-                        <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm">
+                        <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm" style="display:none !important; >
                             {{>theme_moove/frontpage_login}}
                         </div><!-- end of .card-body -->
                     {{/disablefrontpageloginbox}}
-                </div> <!-- end of #boxForm -->
+                </div> <!-- end of #boxForm  " -->
             {{/sliderenabled}}
         </div>
 

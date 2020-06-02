@@ -152,6 +152,5 @@ if (isloggedin()) {
     if ($clientsfrontpage) {
         $templatecontext = array_merge($templatecontext, $themesettings->clients());
     }
-
     echo $OUTPUT->render_from_template('theme_moove/frontpage_guest', $templatecontext);
 }
